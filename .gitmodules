@@ -1,0 +1,3 @@
+[submodule "SwiftData"]
+	path = SwiftData
+	url = https://github.com/NoodleLadJr/SwiftData.git
