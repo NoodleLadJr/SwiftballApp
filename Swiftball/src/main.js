@@ -8,6 +8,11 @@ async function greet() {
   greetMsgEl.textContent = await invoke("greet", { name: greetInputEl.value });
 }
 
+async function test_py() {
+  // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
+  greetMsgEl.textContent = await invoke("test_py", { name: greetInputEl.value });
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   greetInputEl = document.querySelector("#greet-input");
   greetMsgEl = document.querySelector("#greet-msg");
@@ -15,4 +20,6 @@ window.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     greet();
   });
+  document.querySelector("#py-test").addEventListener("submit",(e)=>{e.preventDefault();test_py();})
 });
+
